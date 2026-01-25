@@ -1,4 +1,5 @@
 .Title {
+  margin-bottom: 2rem;
   font-size: 2.5rem;
   text-align: center;
 }
@@ -11,7 +12,6 @@
 }
 
 .projectContainer {
-  margin-top: 3rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: center;

@@ -19,7 +19,7 @@
 .title {
   font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 2rem;
 }
 
 .telegramLink {
@@ -78,7 +78,7 @@
   text-decoration: underline;
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .title {
     font-size: 2rem;
   }
