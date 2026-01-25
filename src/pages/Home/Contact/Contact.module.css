@@ -22,9 +22,14 @@
   margin-bottom: 0.5rem;
 }
 
-.subtitle {
+.telegramLink {
   font-size: 1.1rem;
   color: var(--text-muted);
+  text-decoration: underline;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .grid {

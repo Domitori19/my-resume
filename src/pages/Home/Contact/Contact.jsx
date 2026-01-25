@@ -20,8 +20,20 @@ export default function Contact() {
     <section id="contact" className={styles.contactSection}>
       <div className={styles.contactContainer}>
         <h2 className={styles.title}>Контакти зі мною</h2>
-        <a href="https://t.me/@telegram" className={styles.subtitle}>
-          @telegram
+
+        <a
+          href="https://t.me/domitor9"
+          className={styles.telegramLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/500px-Telegram_2019_Logo.svg.png"
+            alt="telegram logo"
+            width={25}
+            height={25}
+          />
+          <span>Мій телеграм</span>
         </a>
 
         <div className={styles.grid}>
