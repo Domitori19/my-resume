@@ -11,6 +11,7 @@
   --primary2: #e1e725;
   --primary3: #a13edf;
   --secondary: #0fddd6; /* Бирюзовый */
+  --secondary2: #dda1ec; /* Бирюзовый */
 
   /* --- UI элементы (Бордеры и фоны кнопок) --- */
   --glass-bg: rgba(255, 255, 255, 0.05);

@@ -1,5 +1,5 @@
 .skillsSection {
-  padding: 4rem 20px;
+  padding: 0rem 20px;
   /* Важно для вертикального выравнивания (Заголовок сверху, сетка снизу) */
   display: flex;
   flex-direction: column;
@@ -25,7 +25,7 @@
   max-width: 1200px;
   display: grid;
   /* Адаптивная сетка: минимум 280px, иначе перенос */
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
   gap: 24px;
 }
 
@@ -70,7 +70,7 @@
   display: block;
   width: 3px;
   height: 20px;
-  background: linear-gradient(to bottom, var(--primary), var(--secondary));
+  background: linear-gradient(to bottom, var(--primary3), var(--secondary2));
   border-radius: 4px;
 }
 

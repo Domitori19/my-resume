@@ -1,6 +1,14 @@
 import { useState } from "react";
 import styles from "@/components/Header/Header.module.css";
 import { NavLink } from "react-router-dom";
+
+const nav_links = [
+  { to: "#hero", label: "Главная" },
+  { to: "#skills", label: "Навички" },
+  { to: "#project", label: "Проекти" },
+  { to: "#contact", label: "Контакти" },
+];
+
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -37,27 +45,19 @@ export default function Header() {
         {/* Навигация */}
         {/* Добавляем класс .open если стейт true */}
         <nav className={`${styles.nav} ${isOpen ? styles.open : ""}`}>
+          {/* Используем список для лучшего SEO */}
           <ul className={styles.navList}>
-            <li>
-              <a href="#hero" className={styles.navLink} onClick={closeMenu}>
-                Главная
-              </a>
-            </li>
-            <li>
-              <a href="#skills" className={styles.navLink} onClick={closeMenu}>
-                Навички
-              </a>
-            </li>
-            <li>
-              <a href="#project" className={styles.navLink} onClick={closeMenu}>
-                Проекти
-              </a>
-            </li>
-            <li>
-              <a href="#contact" className={styles.navLink} onClick={closeMenu}>
-                Контакти
-              </a>
-            </li>
+            {nav_links.map((link) => (
+              <li key={link.to} className={styles.navItem}>
+                <a
+                  href={link.to}
+                  className={styles.navLink}
+                  onClick={closeMenu}
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>

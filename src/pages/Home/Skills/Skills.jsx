@@ -33,8 +33,6 @@ const skillsData = [
       "VS Code",
       "Figma",
       "Postman",
-      "Docker",
-      "Jira",
       "Webpack",
       "ESLint",
       "Prettier",
