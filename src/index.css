@@ -1,0 +1,72 @@
+:root {
+  /* --- Базовые цвета --- */
+  --font-main:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  --bg-color: #1c1c1c;
+  --text-color: #ffffff;
+
+  /* --- Акцентные цвета --- */
+  --primary: #007cf0;
+  --primary2: #e1e725;
+  --primary3: #a13edf;
+  --secondary: #0fddd6; /* Бирюзовый */
+
+  /* --- UI элементы (Бордеры и фоны кнопок) --- */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-main);
+  line-height: 1.5;
+
+  /* Делаем шрифт четким MacOS/iOS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Цвета */
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#root {
+  isolation: isolate;
+}
+
+html {
+  scroll-behavior: smooth; /* Это магическая строчка */
+}

@@ -1,0 +1,133 @@
+.skillsSection {
+  padding: 4rem 20px;
+  /* Важно для вертикального выравнивания (Заголовок сверху, сетка снизу) */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem; /* Отступ между заголовком и сеткой */
+}
+
+.skillsTitle {
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 700;
+  /* Используем цвет текста из глобальных стилей, но можно усилить */
+  color: var(--text-color);
+}
+
+.highlight {
+  /* Берем твой Secondary цвет для акцента (бирюзовый), он хорошо читается на темном */
+  color: var(--primary3);
+}
+
+/* Красивое контейнерное ограничение */
+.skillsContainer {
+  max-width: 1200px;
+  display: grid;
+  /* Адаптивная сетка: минимум 280px, иначе перенос */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* --- Карточка (Glassmorphism) --- */
+.skillBlock {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+
+  backdrop-filter: blur(12px); /* Размытие фона под карточкой */
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 24px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.skillBlock:hover {
+  transform: translateY(-5px);
+  /* При наведении рамка становится цвета Primary (синий) */
+  border-color: var(--primary);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+/* Заголовок категории (Hard Skills и т.д.) */
+.categoryTitle {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Декоративная линия перед заголовком */
+.categoryTitle::before {
+  content: "";
+  display: block;
+  width: 3px;
+  height: 20px;
+  background: linear-gradient(to bottom, var(--primary), var(--secondary));
+  border-radius: 4px;
+}
+
+/* Список-контейнер для чипсов */
+.skillList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Сами "чипсы" навыков */
+.skillItem {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 8px 16px;
+  border-radius: 100px; /* Полный овал */
+  transition: all 0.2s ease;
+  cursor: default;
+}
+
+.skillItem:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-color: var(--secondary);
+}
+
+/* --- BENTO СЕТКА (Десктоп) --- */
+/* Если экран больше 768px (планшет/ПК) */
+@media (min-width: 768px) {
+  /* Первый блок (Hard Skills) делаем широким (на 2 колонки) */
+  .skillBlock:nth-child(1) {
+    grid-column: span 2;
+    /* Чуть более заметный фон для главного блока */
+    background: linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.06),
+      rgba(255, 255, 255, 0.02)
+    );
+  }
+}
+
+/* --- МОБИЛКА --- */
+@media (max-width: 768px) {
+  .skillsSection {
+    padding: 3rem 16px;
+    gap: 2rem;
+  }
+
+  .skillsContainer {
+    grid-template-columns: 1fr; /* Строго одна колонка */
+  }
+
+  /* Отменяем span для первого блока на телефоне */
+  .skillBlock:nth-child(1) {
+    grid-column: auto;
+  }
+}
