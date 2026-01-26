@@ -3,7 +3,7 @@ export default function Hero() {
   return (
     <section className={styles.heroSection} id="hero">
       <div className={styles.container}>
-        <div className={styles.badge}>👋 Привіт, я Дегтяр Дмитро</div>
+        <div className={styles.badge}>👋 Привіт, я Дмитро Дегтяр</div>
 
         <h1 className={styles.title}>
           Розробка сучасних <br />
@@ -17,7 +17,7 @@ export default function Hero() {
           пишу чистий код та дбаю про зручність інтерфейсу.
         </p>
 
-        <div className={styles.buttons}>
+        {/* <div className={styles.buttons}>
           <a href="#projects" className={`${styles.btn} ${styles.btnPrimary}`}>
             Мої роботи
           </a>
@@ -25,7 +25,7 @@ export default function Hero() {
           <a href="#" className={`${styles.btn} ${styles.btnOutline}`}>
             Завантажити CV
           </a>
-        </div>
+        </div> */}
       </div>
 
       <div className={styles.heroGlow}></div>

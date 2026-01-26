@@ -15,6 +15,8 @@ const skillsData = [
       "REST API",
       "Tailwind CSS",
       "Express.js",
+      "Zustand",
+      "Reactrouter",
     ],
   },
   {
