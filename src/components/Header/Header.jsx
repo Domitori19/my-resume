@@ -17,12 +17,10 @@ export default function Header() {
     setIsOpen((prev) => !prev);
   };
 
-  // Закрываем меню при клике на ссылку (важно для UX)
+  // Закрываем меню при клике на ссылку навигации
   const closeMenu = () => {
     setIsOpen(false);
   };
-
-  // Простые якорные ссылки внутри страницы
 
   return (
     <header className={styles.header}>
@@ -43,9 +41,7 @@ export default function Header() {
         </button>
 
         {/* Навигация */}
-        {/* Добавляем класс .open если стейт true */}
         <nav className={`${styles.nav} ${isOpen ? styles.open : ""}`}>
-          {/* Используем список для лучшего SEO */}
           <ul className={styles.navList}>
             {nav_links.map((link) => (
               <li key={link.to} className={styles.navItem}>

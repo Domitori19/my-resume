@@ -1,6 +1,5 @@
 import styles from "./Skills.module.css";
 
-// 1. Выносим данные наружу. Это можно даже перенести в отдельный файл data/skills.js
 const skillsData = [
   {
     category: "Hard Skills",
@@ -17,6 +16,7 @@ const skillsData = [
       "Express.js",
       "Zustand",
       "Reactrouter",
+      "Swiper.js",
     ],
   },
   {
@@ -30,15 +30,7 @@ const skillsData = [
   },
   {
     category: "Інструменти",
-    items: [
-      "Git",
-      "VS Code",
-      "Figma",
-      "Postman",
-      "Webpack",
-      "ESLint",
-      "Prettier",
-    ],
+    items: ["Git", "VS Code", "Figma", "Postman", "Vite", "ESLint", "Prettier"],
   },
   {
     category: "Мови",
@@ -54,7 +46,6 @@ export default function Skills() {
       </h2>
 
       <div className={styles.skillsContainer}>
-        {/* 2. Используем map для генерации блоков */}
         {skillsData.map((group, index) => (
           <div key={index} className={styles.skillBlock}>
             <h3 className={styles.categoryTitle}>{group.category}</h3>
