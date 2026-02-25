@@ -80,17 +80,16 @@
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.8);
   background-color: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.05);
   padding: 8px 16px;
   border-radius: 100px; /* Полный овал */
-  transition: all 0.2s ease;
+  /* transition: all 6s ease; */
   cursor: default;
 }
 
 .skillItem:hover {
   background-color: rgba(255, 255, 255, 0.1);
   color: #fff;
-  border-color: var(--secondary);
+  outline: 3px solid var(--secondary2);
 }
 
 /* --- Desktop --- */

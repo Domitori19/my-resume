@@ -26,7 +26,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.headerContainer}>
         <NavLink to="/" className={styles.logo} onClick={closeMenu}>
-          Domitori<span>.</span>
+          Domitori
         </NavLink>
 
         {/* Кнопка Гамбургер */}
