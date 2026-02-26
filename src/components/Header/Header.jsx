@@ -22,6 +22,23 @@ export default function Header() {
     setIsOpen(false);
   };
 
+  // Обработчик для якорных ссылок
+  const handleAnchorClick = (e) => {
+    const href = e.currentTarget.getAttribute("href");
+
+    if (href.startsWith("#")) {
+      e.preventDefault();
+      const targetId = href.substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+
+    closeMenu();
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.headerContainer}>
@@ -48,7 +65,7 @@ export default function Header() {
                 <a
                   href={link.to}
                   className={styles.navLink}
-                  onClick={closeMenu}
+                  onClick={handleAnchorClick}
                 >
                   {link.label}
                 </a>
