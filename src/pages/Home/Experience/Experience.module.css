@@ -1,0 +1,33 @@
+/* --- Experience Section --- */
+.experienceSection {
+  padding: 3rem 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg-section);
+}
+
+.experienceTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.experienceText {
+  max-width: 800px;
+  text-align: center;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.highlight {
+  color: var(--primary3);
+  font-weight: 600;
+}
+
+/* --- Adaptive --- */
+@media (max-width: 768px) {
+  .experienceSection {
+    padding: 2rem 16px;
+  }
+}
