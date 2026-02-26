@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 const nav_links = [
   { to: "#hero", label: "Главная" },
   { to: "#skills", label: "Навички" },
+  { to: "#experience", label: "Опыт" },
   // { to: "#project", label: "Проекти" },
   { to: "#contact", label: "Контакти" },
 ];
@@ -22,7 +23,7 @@ export default function Header() {
     setIsOpen(false);
   };
 
-  // Обработчик для якорных ссылок
+  // --- Обработчик для якорных ссылок ---
   const handleAnchorClick = (e) => {
     const href = e.currentTarget.getAttribute("href");
 
@@ -32,7 +33,7 @@ export default function Header() {
       const targetElement = document.getElementById(targetId);
 
       if (targetElement) {
-        targetElement.scrollIntoView({ behavior: "smooth" });
+        targetElement.scrollIntoView({ behavior: "smooth", block: "center" });
       }
     }
 
